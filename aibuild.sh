@@ -12,4 +12,5 @@ echo "############################### build dtbs end #######################."
 
 # sudo dd if=arch/arm/boot/zImage of=/dev/sdb bs=512 seek=2048 conv=fsync && sync
 # sudo dd if=arch/arm/boot/dts/imx6ull-100ask-emmc.dtb of=/dev/sdb bs=512 seek=20480 conv=fsync && sync
+# mount -t nfs -o nolock,vers=3 192.168.1.9:/aitftpnfs/rootfs /mnt
 
