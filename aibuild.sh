@@ -1,5 +1,8 @@
 #!/bin/bash
 
+export ARCH=arm
+export CROSS_COMPILE=arm-none-linux-gnueabihf-
+
 make mrproper
 # make imx_v7_defconfig
 make imx_100ask_emmc_defconfig
@@ -8,8 +11,8 @@ echo "############################### build zImage end #######################."
 make dtbs
 echo "############################### build dtbs end #######################."
 
-cp -arf arch/arm/boot/zImage /mnt/hgfs/share/
-cp -arf arch/arm/boot/dts/imx6ull-100ask-emmc.dtb /mnt/hgfs/share/
+#cp -arf arch/arm/boot/zImage /mnt/hgfs/share/
+#cp -arf arch/arm/boot/dts/imx6ull-100ask-emmc.dtb /mnt/hgfs/share/
 
 # 将生成的zImage和imx6ull-100ask-emmc.dtb拷贝到SD卡的boot分区中
 
